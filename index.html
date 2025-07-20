@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Prank</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      color: #e91e63;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+
+    #surprise {
+      font-size: 100px;
+      margin-top: 50px;
+      display: none;
+      animation: pop 0.5s ease-out forwards;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .laugh {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #444;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click for a surprise 😍</h1>
+  <button onclick="showMiddleFinger()">Click Me!</button>
+
+  <div id="surprise">🖕</div>
+  <div class="laugh" id="laugh">LOL! Just kidding... I love you 💖</div>
+
+  <script>
+    function showMiddleFinger() {
+      document.getElementById("surprise").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("laugh").style.display = "block";
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
