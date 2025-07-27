@@ -3,61 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <title>Love Prank</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fff0f5;
-      text-align: center;
-      padding-top: 100px;
-    }
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
 
-    h1 {
-      color: #e91e63;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background: #fff0f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
 
-    button {
-      padding: 15px 30px;
-      font-size: 20px;
-      background-color: #e91e63;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+  h1 {
+    color: #e91e63;
+  }
 
-    button:hover {
-      background-color: #c2185b;
-    }
+  button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-    #surprise {
-      font-size: 100px;
-      margin-top: 50px;
-      display: none;
-      animation: pop 0.5s ease-out forwards;
-    }
+  button:hover {
+    background-color: #c2185b;
+  }
 
-    @keyframes pop {
-      0% { transform: scale(0); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
+  #surprise {
+    font-size: 100px;
+    margin-top: 50px;
+    display: none;
+    animation: pop 0.5s ease-out forwards;
+  }
 
-    .laugh {
-      margin-top: 20px;
-      font-size: 24px;
-      color: #444;
-      display: none;
-    }
-  </style>
+  @keyframes pop {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .laugh {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #444;
+    display: none;
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 20px;
+    font-size: 16px;
+    color: #888;
+  }
+</style>
+
 </head>
 <body>
 
   <h1>Click for a surprise 😍</h1>
   <button onclick="showMiddleFinger()">Click Me!</button>
 
-  <div id="surprise">🖕</div>
-  <div class="laugh" id="laugh">LOL! Just kidding... I love you 💖</div>
 
+  <div id="surprise">🖕</div>
+  <div class="laugh" id="laugh">LOL! Just kidding..💖</div>
+  <footer>SDP Project by M_FOR_?</footer>
   <script>
     function showMiddleFinger() {
       document.getElementById("surprise").style.display = "block";
